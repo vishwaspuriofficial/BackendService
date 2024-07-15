@@ -3,9 +3,9 @@ package backend.service.api.model;
 public class Calculate {
     private int firstNumber;
     private int secondNumber;
-    private Symbol sign;
+    private String sign;
 
-    public Calculate(int firstNumber, int secondNumber, Symbol sign) {
+    public Calculate(int firstNumber, int secondNumber, String sign) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.sign = sign;
@@ -27,11 +27,11 @@ public class Calculate {
         this.secondNumber = secondNumber;
     }
 
-    public Symbol getSign() {
+    public String getSign() {
         return sign;
     }
 
-    public void setSign(Symbol sign) {
+    public void setSign(String sign) {
         this.sign = sign;
     }
 }
