@@ -1,29 +1,29 @@
 package backend.service.api.model;
 
 public class Calculate {
-    private int firstNumber;
-    private int secondNumber;
+    private double firstNumber;
+    private double secondNumber;
     private String sign;
 
-    public Calculate(int firstNumber, int secondNumber, String sign) {
+    public Calculate(double firstNumber, double secondNumber, String sign) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.sign = sign;
     }
 
-    public int getFirstNumber() {
+    public double getFirstNumber() {
         return firstNumber;
     }
 
-    public void setFirstNumber(int firstNumber) {
+    public void setFirstNumber(double firstNumber) {
         this.firstNumber = firstNumber;
     }
 
-    public int getSecondNumber() {
+    public double getSecondNumber() {
         return secondNumber;
     }
 
-    public void setSecondNumber(int secondNumber) {
+    public void setSecondNumber(double secondNumber) {
         this.secondNumber = secondNumber;
     }
 

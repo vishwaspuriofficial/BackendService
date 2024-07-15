@@ -8,17 +8,17 @@ public class CalculatorService {
 
     private Calculate eqn;
 
-    public void setEquation(int firstNumber, int secondNumber, String sign) {
+    public void setEquation(double firstNumber, double secondNumber, String sign) {
         this.eqn = new Calculate(firstNumber, secondNumber, sign);
     }
 
-    public int calculate()
+    public double calculate()
     {
         return switch (eqn.getSign()) {
-            case "+" -> eqn.getFirstNumber() + eqn.getSecondNumber();
-            case "-" -> eqn.getFirstNumber() - eqn.getSecondNumber();
-            case "*" -> eqn.getFirstNumber() * eqn.getSecondNumber();
-            case "/" -> eqn.getFirstNumber() / eqn.getSecondNumber();
+            case "plus" -> eqn.getFirstNumber() + eqn.getSecondNumber();
+            case "minus" -> eqn.getFirstNumber() - eqn.getSecondNumber();
+            case "multiply" -> eqn.getFirstNumber() * eqn.getSecondNumber();
+            case "divide" -> eqn.getFirstNumber() / eqn.getSecondNumber();
             default -> 0;
         };
     }

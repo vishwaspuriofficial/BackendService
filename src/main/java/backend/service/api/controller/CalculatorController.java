@@ -1,9 +1,8 @@
 package backend.service.api.controller;
+import backend.service.api.model.User;
 import backend.service.service.CalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CalculatorController {
@@ -21,10 +20,14 @@ public class CalculatorController {
     }
 
     @GetMapping("/calculate")
-    public int calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String symbol) {
-        System.out.println("CHECKKKKK num1: " + num1 + ", num2: " + num2 + ", symbol: " + symbol);
+    public double calculate(@RequestParam double num1, double num2, String symbol) {
         calculatorService.setEquation(num1, num2, symbol);
         return calculatorService.calculate();
+    }
+
+    @PostMapping("/addUser")
+    public String addUser(@RequestBody User user) {
+        return "Hello, "+user.getFirstName();
     }
 
 }
